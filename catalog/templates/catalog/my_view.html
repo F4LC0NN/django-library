@@ -1,0 +1,14 @@
+{% if user.is_authenticated %}
+    {% extends 'base.html' %}
+    
+    {% block title %}Members Lobby{% endblock  %}
+    
+    {% block content %}
+        <h1>Members Lobby</h1>
+        <br>
+        <p>Only authorized users can access this page</p>
+        <p>If you see this page, you are authorized</p>
+        <br>
+        <p>Welcome to you {{user.get_username}}!</p>
+    {% endblock  %}
+{% endif %}
